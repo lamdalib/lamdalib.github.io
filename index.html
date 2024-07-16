@@ -11,7 +11,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
+            margin: 32px auto;
             background-color: #111111;
         }
 
@@ -46,6 +46,53 @@
             font-size: 0.9em;
             color: #777;
         }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .grid-item {
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .grid-item img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
+
+        .grid-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .grid-item .item-title {
+            margin-top: 10px;
+            font-size: 1em;
+            color: #ffffff;
+        }
+
+        .grid-item .item-description {
+            font-size: 0.9em;
+            color: #cccccc;
+        }
+
+        .grid-item .docs-link {
+            display: block;
+            margin-top: 5px;
+            font-size: 0.9em;
+            color: #00aaff;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .grid-item .docs-link:hover {
+            color: #0077cc;
+        }
     </style>
 </head>
 <body>
@@ -56,7 +103,22 @@
         <a class="github-link" href="https://github.com/kattulib" target="_blank">
             <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo">
         </a>
+        <div class="grid-container">
+            <a class="grid-item" href="https://github.com/kattulib/kuram" target="_blank">
+                <img src="kuram.jpeg" alt="kuram">
+                <div class="item-title">kuram</div>
+            </a>
+            <a class="grid-item" href="https://github.com/kattulib/fal" target="_blank">
+                <img src="fal.jpeg" alt="fal">
+                <div class="item-title">fal</div>
+            </a>
+            <a class="grid-item" href="https://github.com/kattulib/rassal" target="_blank">
+                <img src="rassal.jpeg" alt="rassal">
+                <div class="item-title">rassal</div>
+            </a>
+        </div>
         <div class="copyright">&copy; 2024 Kattulib. All rights reserved.</div>
     </div>
 </body>
 </html>
+
